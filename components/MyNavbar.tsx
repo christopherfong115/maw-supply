@@ -7,6 +7,7 @@ import mslogo from "../styles/photos/maw-supply-7-yellow.png";
 
 const paths = [
   ["Akoma Tee", "/akomaTee"],
+  ["Shop", "/shop"],
   ["About", "/about"],
   ["Pins", "/pins"],
   ["Journal", "/journal"],

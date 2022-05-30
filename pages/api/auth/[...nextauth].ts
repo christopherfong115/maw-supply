@@ -35,11 +35,4 @@ export default NextAuth({
   pages: {
     signIn: "/signin",
   },
-  callbacks: {
-    async session({ session, token }) {
-      session.ref = token.ref;
-      session.user = token.user as User;
-      return session;
-    },
-  },
 });

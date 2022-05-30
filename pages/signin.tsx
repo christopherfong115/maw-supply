@@ -10,18 +10,22 @@ const signin: NextPage<{ providers: any }> = ({ providers }) => {
         <title>Sign In | Paintr</title>
       </Head>
       <div className="mx-auto">
-        {Object.values(providers).map((provider: any) => {
+        {/* {Object.values(providers).map((provider: any) => {
           return (
             <div className="" key={provider.name}>
               <button
                 className="p-4 bg-emerald-500 rounded-2xl shadow-2xl"
-                onClick={() => signIn(provider.id)}
+                onClick={() => signIn(provider.id, { callbackUrl: "/" })}
               >
                 Sign in with {provider.name}
               </button>
             </div>
           );
-        })}
+        })} */}
+        Log in right now
+        <button onClick={() => signIn("google", { callbackUrl: "/" })}>
+          Sign in
+        </button>
       </div>
     </>
   );
@@ -29,10 +33,10 @@ const signin: NextPage<{ providers: any }> = ({ providers }) => {
 
 export default signin;
 
-export const getStaticProps: GetStaticProps = async () => {
-  return {
-    props: {
-      providers: await getProviders(),
-    },
-  };
-};
+// export const getStaticProps: GetStaticProps = async () => {
+//   return {
+//     props: {
+//       providers: await getProviders(),
+//     },
+//   };
+// };
